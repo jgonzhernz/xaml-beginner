@@ -20,21 +20,26 @@ namespace RestaurantManager.UniversalWindows
     /// <summary>
     /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class OrderPage : Page
     {
-        public MainPage()
+        public OrderPage()
         {
             this.InitializeComponent();
         }
 
-        private void OrdersView_click(object sender, RoutedEventArgs e)
+        private void AddOrder_click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ExpeditePage));
+
         }
 
         private void SubmitOrder_click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(OrderPage));
+
+        }
+
+        private void Home_click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
         }
     }
 }

@@ -45,27 +45,31 @@
             </TextBlock.Foreground>
         </TextBlock>
 
-        <TextBlock
-            Grid.Row="3"
+        <Button 
+            Grid.Row="3" 
             Grid.Column="0"
-            Text="**Go to Orders View**"
+            Content="Go to Orders View"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center" >
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="{ThemeResource SystemAltMediumHighColor}"/>
-            </TextBlock.Foreground>
-        </TextBlock>
+            VerticalAlignment="Center"
+            Click="OrdersView_click" 
+            Background="{ThemeResource AppBarSeparatorForegroundThemeBrush}" >
+            <Button.Foreground>
+                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+            </Button.Foreground>
+        </Button>
 
-        <TextBlock
-            Grid.Row="3"
+        <Button
+            Grid.Row="2"
             Grid.Column="1"
-            Text="**Submit Order**"
+            Content ="Submit Order"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center" >
-            <TextBlock.Foreground>
-                <SolidColorBrush Color="{ThemeResource SystemAltMediumHighColor}"/>
-            </TextBlock.Foreground>
-        </TextBlock>
+            VerticalAlignment="Center" 
+            Click="SubmitOrder_click" 
+            Background="{ThemeResource AppBarSeparatorForegroundThemeBrush}" >
+            <Button.Foreground>
+                <SolidColorBrush Color="{ThemeResource SystemAltHighColor}" />
+            </Button.Foreground>
+        </Button>
 
     </Grid>
 </Page>

@@ -7,6 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <AppBar IsOpen="True">
+            <CommandBar HorizontalAlignment="Left">
+                <AppBarButton Icon="Home" Label="Home" Click="Home_click" />
+            </CommandBar>
+        </AppBar>
+    </Page.TopAppBar>
+
+
     <Grid Background="{ThemeResource AppBarItemForegroundThemeBrush}">
 
         <Grid.ColumnDefinitions>
@@ -45,28 +54,30 @@
             </TextBlock.Foreground>
         </TextBlock>
 
-        <TextBlock
+        <Button
             Grid.Row="4"
             Grid.Column="0"
-            Text="**Add to Order**"
+            Content="Add to Order"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center" >
-            <TextBlock.Foreground>
+            VerticalAlignment="Center"
+            Click="AddOrder_click" >
+            <Button.Foreground>
                 <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
-            </TextBlock.Foreground>
-        </TextBlock>
+            </Button.Foreground>
+        </Button>
 
-        <TextBlock
+        <Button
             Grid.Row="4"
             Grid.Column="1"
             Grid.ColumnSpan="2"
-            Text="**Submit Order**"
+            Content="Submit Order"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center" >
-            <TextBlock.Foreground>
+            VerticalAlignment="Center"
+            Click="SubmitOrder_click" >
+            <Button.Foreground>
                 <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
-            </TextBlock.Foreground>
-        </TextBlock>
+            </Button.Foreground>
+        </Button>
 
     </Grid>
 </Page>

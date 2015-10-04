@@ -7,6 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <Page.TopAppBar>
+        <AppBar IsOpen="True">
+            <CommandBar HorizontalAlignment="Left">
+                <AppBarButton Icon="Home" Label="Home" Click="Home_click" />
+            </CommandBar>
+        </AppBar>
+    </Page.TopAppBar>
+
     <Grid Background="{ThemeResource AppBarItemForegroundThemeBrush}">
 
         <Grid.RowDefinitions>
@@ -14,15 +22,17 @@
             <RowDefinition Height="0.1*" />
         </Grid.RowDefinitions>
         
-        <TextBlock
+        <Button
             Grid.Row="1"
-            Text="**Clear All Orders**"
+            Content="Clear All Orders"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center" >
-            <TextBlock.Foreground>
+            VerticalAlignment="Center" 
+            Background="{ThemeResource AppBarSeparatorForegroundThemeBrush}"
+            Click="ClearOrders_click">
+            <Button.Foreground>
                 <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
-            </TextBlock.Foreground>
-        </TextBlock>
+            </Button.Foreground>
+        </Button>
 
     </Grid>
 </Page>
