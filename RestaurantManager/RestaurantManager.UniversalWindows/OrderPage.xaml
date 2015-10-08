@@ -53,6 +53,22 @@
                 <SolidColorBrush Color="{ThemeResource SystemAltHighColor}"/>
             </TextBlock.Foreground>
         </TextBlock>
+        
+        <ListView
+            x:Name="AvailableItems" 
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.RowSpan="3"
+            DataContext="{CustomResource DataManager}"
+            ItemsSource="{Binding MenuItems, Mode=OneTime}" />
+        
+        <ListView
+            x:Name="SelectedItems"
+            Grid.Row="2"
+            Grid.Column="2"
+            Grid.RowSpan="2"
+            DataContext="{CustomResource DataManager}"
+            ItemsSource="{Binding CurrentlySelectedMenuItems, Mode=TwoWay}" />
 
         <Button
             Grid.Row="4"

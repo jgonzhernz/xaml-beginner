@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Resources;
 
 namespace RestaurantManager.UniversalWindows
 {
@@ -28,9 +29,12 @@ namespace RestaurantManager.UniversalWindows
         /// </summary>
         public App()
         {
+            CustomXamlResourceLoader.Current = new DataManagerResourceLoader();
+
             Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
                 Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
                 Microsoft.ApplicationInsights.WindowsCollectors.Session);
+
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }

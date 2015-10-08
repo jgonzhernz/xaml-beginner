@@ -21,7 +21,12 @@
             <RowDefinition Height="0.9*" />
             <RowDefinition Height="0.1*" />
         </Grid.RowDefinitions>
-        
+
+        <GridView x:Name="AllOrders" 
+                  Grid.Row="0" 
+                  DataContext="{CustomResource DataManager}"
+                  ItemsSource="{Binding OrdersItems, Mode=TwoWay}" />
+
         <Button
             Grid.Row="1"
             Content="Clear All Orders"
